@@ -6,6 +6,7 @@ function showCrashID (crashid) {
         success: function(data) {
             data = data.replace(/(\r\n|\n|\r)/gm, "<br/>");
             $('#logarea').html("<pre>" + data + "</pre>");
+            $(window).scrollTop($("#logarea").offset().top);
         }
     });
     $.ajax({
